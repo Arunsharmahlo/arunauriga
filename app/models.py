@@ -21,7 +21,10 @@ class ParkingSession(Base):
     plate_number = Column(String, nullable=False, index=True)
     vehicle_type = Column(String, nullable=False)
     spot_id = Column(Integer, nullable=False)
+
     entry_time = Column(DateTime, nullable=False)
     exit_time = Column(DateTime, nullable=True)
+
     fee = Column(Float, nullable=True)
+
     is_active = Column(Boolean, default=True, nullable=False)
